@@ -1,3 +1,4 @@
+# Elizabeth Cooney - Module 2 Challenge
 # Menu dictionary
 menu = {
     "Snacks": {
