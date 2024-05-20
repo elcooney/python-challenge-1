@@ -118,17 +118,17 @@ while place_order:
                     }
                     i += 1
             # 2. Ask customer to input menu item number
-            menu_item_number = input("Please input menu item number: ")
+            menu_selection = input("Please input menu item number: ")
 
             # 3. Check if the customer typed a number
-            if menu_item_number.isdigit():
+            if menu_selection.isdigit():
                 # Convert the menu selection to an integer
-                menu_item_number_int = int(menu_item_number)
+                menu_selection = int(menu_selection)
 
                 # 4. Check if the menu selection is in the menu items
-                if menu_item_number_int in menu_items:
+                if menu_selection in menu_items:
                     # Store the item name as a variable
-                    item_name = menu_items[menu_item_number_int]
+                    item_name = menu_items[menu_selection]
 
                     # Ask the customer for the quantity of the menu item
                     quantity = input("How many do you want? ")
@@ -144,7 +144,7 @@ while place_order:
                     # Add the item name, price, and quantity to the order list
                     item_name['Quantity'] = quantity_int
                     order.append(item_name)
-                    print(order)
+                    #print(order)
 
 
                 # Tell the customer that their input isn't valid
@@ -227,11 +227,11 @@ for d in order:
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
 
-total_cost = []
-
 total_cost = [order[n]["Price"]*order[n]["Quantity"] for n in range(len(order))]
 
-'''for n in range(len(order)):
+'''total_cost = []
+
+for n in range(len(order)):
     cost = order[n]["Price"] * order[n]["Quantity"]
     total_cost.append(cost)'''
 
